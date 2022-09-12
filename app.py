@@ -146,10 +146,10 @@ def predict():
                                    )
         adultcensus_df = adultcensus_data.get_creditcard_input_data_frame()
         adultcensus_predictor = AdultCensusPredictor(model_dir=MODEL_DIR)
-        salary_next_month = adultcensus_predictor.predict(X=adultcensus_df)
+        adultcensus_income_prediction_key = adultcensus_predictor.predict(X=adultcensus_df)
         context = {
             ADULTCENSUS_DATA_KEY: adultcensus_data.get_adultcensus_data_as_dict(),
-            ADULTCENSUS_INCOME_PREDICTION_KEY: salary_next_month,
+            ADULTCENSUS_INCOME_PREDICTION_KEY: adultcensus_income_prediction_key,
         }
         return render_template('predict.html', context=context)
     return render_template("predict.html", context=context)
