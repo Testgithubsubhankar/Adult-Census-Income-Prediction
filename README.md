@@ -1,3 +1,4 @@
+Application url: https://adult-census-income-predict.herokuapp.com/
 # Adult-Census-Income-Prediction
 This income prediction project involves many Machine learning algorithm and techniques. 
 ```
