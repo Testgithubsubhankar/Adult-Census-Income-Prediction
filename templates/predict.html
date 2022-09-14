@@ -3,7 +3,7 @@
 {% block head %}
 
 
-<title>AdultCensus Estimator</title>
+<title>salary next month Estimator</title>
 {% endblock %}
 
 {% block content %}
@@ -56,8 +56,8 @@
                                 placeholder="Enter a value of bill_amt4" required />    
             </div>
             <div class="mb-3"_
-                <label class="form-label">SALARY</label>
-                <select class="form-control" name="salary_next_month" placeholder="Enter a value of adultcensus_income_prediction"
+                <label class="form-label">salary next month</label>
+                <select class="form-control" name="salary_next_month" placeholder="Enter a value of salary_next_month"
                     required>
 
                     <option value="<<=50k">
@@ -103,9 +103,9 @@
             {% endfor %}
             <tr>
 
-                <td>default_payment_next_month </td>
+                <td>salary_next_month </td>
                 <td>
-                    {{ context['default_payment_next_month'] }}
+                    {{ context['salary_next_month'] }}
                 </td>
             </tr>
         </table>

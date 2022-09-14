@@ -116,8 +116,8 @@ def predict():
         capital_gain = float(request.form['capital_gain'])
         capital_loss = float(request.form['capital_loss'])
         hours_per_week = float(request.form['hours_per_week'])
+        sex = float(request.form['sex'])
         
-        sex = request.form['sex']
         education = request.form['education']
         marital_status = request.form['marital_status']
         occupation = request.form['occupation']
