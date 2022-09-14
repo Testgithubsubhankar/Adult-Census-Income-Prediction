@@ -108,8 +108,6 @@ def predict():
     }
 
     if request.method == 'POST':
-        
-        
         age = float(request.form['age'])
         fnlwgt = float(request.form['fnlwgt'])
         education_num = float(request.form['education_num'])
@@ -117,19 +115,15 @@ def predict():
         capital_loss = float(request.form['capital_loss'])
         hours_per_week = float(request.form['hours_per_week'])
         sex = float(request.form['sex'])
-        
         education = request.form['education']
         marital_status = request.form['marital_status']
         occupation = request.form['occupation']
         relationship = request.form['relationship']
         race= request.form['race']
         country = request.form['country']
-        
         salary_next_month = request.form['salary_next_month']
 
-        adultcensus_data = AdultcensusData(
-                                   
-                                   age= age,
+        adultcensus_data = AdultcensusData(age= age,
                                    fnlwgt =fnlwgt,
                                    education_num = education_num,
                                    capital_gain = capital_gain,
@@ -144,7 +138,7 @@ def predict():
                                    country = country,
                                    salary_next_month = salary_next_month,
                                    )
-        adultcensus_df = adultcensus_data.get_creditcard_input_data_frame()
+        adultcensus_df = adultcensus_data.get_adultcensus_input_data_frame()
         adultcensus_predictor = AdultCensusPredictor(model_dir=MODEL_DIR)
         adultcensus_income_prediction_key = adultcensus_predictor.predict(X=adultcensus_df)
         context = {
